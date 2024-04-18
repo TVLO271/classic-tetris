@@ -9,9 +9,10 @@ Sprint 1:
 
 Sprint 2:
 - [ ] Update code and add commit messages
-- [ ] Use parts of existing code
+- [x] Use parts of existing code
 - [ ] Update READ.me file with additional project description
-- [ ] Make small changes to the game's appearance
+- [x] Make small changes to the game's appearance
+- [ ] Make at least 6 changes and commit them
 - [ ] Complete Sprint 2 quiz
 
 Sprint 3:
