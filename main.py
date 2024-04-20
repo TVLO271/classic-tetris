@@ -1,5 +1,7 @@
-import pygame,sys
+import pygame
+import sys
 from grid import Grid
+from blocks import *
 
 pygame.init()
 
@@ -14,23 +16,20 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-#test to see if the grid is working properly
-game_grid.grid[0][0] = 1
-game_grid.grid[3][5] = 4
-game_grid.grid[17][8] = 7
-
-game_grid.print_grid()
+#create the L block-- says it is not created
+block = TBlock()
 
 #adding game loop for consistency in all players
 while True: 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit
+            pygame.quit()
             sys.exit()
             
     #Drawing
     screen.fill(dark_blue)
     game_grid.draw(screen)
+    block.draw(screen)
     
     pygame.display.update()
     clock.tick(60)

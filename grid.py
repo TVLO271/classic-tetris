@@ -1,4 +1,5 @@
 import pygame
+from colors import Colors
 
 #create grid size and format for game pieces
 class Grid:
@@ -7,8 +8,8 @@ class Grid:
         self.num_cols = 10
         self.cell_size = 30
         self.grid = [[0 for j in range(self.num_cols)] for i in range(self.num_rows)]
-        self.colors = self.get_cell_colors()
-        
+        #call from the Colors class 
+        self.colors = Colors.get_cell_colors()
         
     #used to print grid and values
     def print_grid(self):
@@ -16,20 +17,6 @@ class Grid:
             for column in range(self.num_cols):
                 print(self.grid[row][column], end = " ")
             print()
-    
-    #defining game piece and empty space colors
-    def get_cell_colors(self):
-        dark_grey = (26, 31, 40)
-        green = (47, 230, 23)
-        red = (232, 18, 18)
-        orange = (226, 116, 17)
-        yellow = (237, 234, 4)
-        purple = (166, 0, 247)
-        cyan = (21, 204, 209)
-        blue = (13, 64, 216)
-
-        #order of colors matter
-        return[dark_grey, green, red, orange, yellow, purple, cyan, blue]
     
     #drawing grid/ assigning values 
     def draw(self, screen):
