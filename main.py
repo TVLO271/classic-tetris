@@ -1,7 +1,6 @@
 import pygame
 import sys
-from grid import Grid
-from blocks import *
+from game import Game
 
 pygame.init()
 
@@ -14,10 +13,8 @@ pygame.display.set_caption("Classic Tetris")
 
 clock = pygame.time.Clock()
 
-game_grid = Grid()
-
-#create the L block-- says it is not created
-block = TBlock()
+#create game object
+game = Game()
 
 #adding game loop for consistency in all players
 while True: 
@@ -25,11 +22,18 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+        #to detect block movement using keyboard,call game.py
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                game.move_left()
+            if event.key == pygame.K_RIGHT:
+                game.move_right()
+            if event.key == pygame.K_DOWN:
+                game.move_down()
             
     #Drawing
     screen.fill(dark_blue)
-    game_grid.draw(screen)
-    block.draw(screen)
+    game.draw(screen)
     
     pygame.display.update()
     clock.tick(60)
