@@ -16,6 +16,10 @@ clock = pygame.time.Clock()
 #create game object
 game = Game()
 
+#create event that is triggered every time the game needs to be updated (200 milliseconds)
+GAME_UPDATE = pygame.USEREVENT
+pygame.time.set_timer(GAME_UPDATE, 200)
+
 #adding game loop for consistency in all players
 while True: 
     for event in pygame.event.get():
@@ -31,7 +35,9 @@ while True:
             if event.key == pygame.K_DOWN:
                 game.move_down()
             if event.key == pygame.K_UP:
-                game.rotate()    
+                game.rotate()
+        if event.type == GAME_UPDATE:
+            game.move_down()
         
     #Drawing
     screen.fill(dark_blue)
