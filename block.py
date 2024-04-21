@@ -24,6 +24,18 @@ class Block:
             position = Position(position.row + self.row_offset, position.column + self.column_offset)
             moved_tiles.append(position)
         return moved_tiles
+    
+    #rotate blocks
+    def rotate(self):
+        self.rotation_state +=1
+        if self.rotation_state == len(self.cells):
+            self.rotation_state = 0
+     
+    #check if block is inside game window during rotation
+    def undo_rotation(self):
+        self.rotation_state -= 1
+        if self.rotation_state == 0:
+            self.rotation_state = len(self.cells) - 1
         
     #draws the block on the screen, make screen file (position.py) to make it easier to call
     def draw(self, screen):
