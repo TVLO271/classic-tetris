@@ -8,12 +8,12 @@ Sprint 1:
 - [x] Complete Sprint 1 quiz
 
 Sprint 2:
-- [ ] Update code and add commit messages
+- [x] Update code and add commit messages
 - [x] Use parts of existing code
-- [ ] Update READ.me file with additional project description
+- [x] Update READ.me file with additional project description
 - [x] Make small changes to the game's appearance
-- [ ] Make at least 6 changes and commit them
-- [ ] Complete Sprint 2 quiz
+- [x] Make at least 6 changes and commit them
+- [x] Complete Sprint 2 quiz
 
 Sprint 3:
 - [ ] Create PowerPoint presentation
