@@ -1,4 +1,4 @@
-#defined colors to call on grid.py
+#defined colors to call on grid.py and main.py
 class Colors: 
     dark_grey = (26, 31, 40)
     green = (47, 230, 23)
@@ -8,6 +8,9 @@ class Colors:
     purple = (166, 0, 247)
     cyan = (21, 204, 209)
     blue = (13, 64, 216)
+    white = (255, 255, 255)
+    dark_blue = (44, 44, 127)
+    light_blue = (59, 85, 162)
     
     #define method used to call class and not instance of class
     @classmethod

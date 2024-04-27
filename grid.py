@@ -66,5 +66,5 @@ class Grid:
             for column in range(self.num_cols):
                 cell_value = self.grid[row][column]
                 #creating cell of the grid (x, y, w, h), edit cells to have game be 29 pixels
-                cell_rect = pygame.Rect(column*self.cell_size + 1, row*self.cell_size + 1, self.cell_size - 1, self.cell_size - 1)
+                cell_rect = pygame.Rect(column*self.cell_size + 11, row*self.cell_size + 11, self.cell_size - 1, self.cell_size - 1)
                 pygame.draw.rect(screen, self.colors[cell_value], cell_rect)
