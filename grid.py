@@ -33,7 +33,7 @@ class Grid:
         for column in range(self.num_cols):
             if self.grid[row][column] == 0:
                 return False
-            return True
+        return True
     
     def clear_row(self, row):
         for column in range(self.num_cols):
